@@ -8,7 +8,7 @@ import SearchBar from "../search/search_bar";
 class NavBar extends React.Component {
 
     toggle(){
-        document.getElementById("root").className="strobe"
+        document.getElementById("root").className="intensifies"
     }
 
     render(){
