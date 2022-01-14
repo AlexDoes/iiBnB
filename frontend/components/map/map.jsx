@@ -19,6 +19,7 @@ class Map extends React.Component {
         } else {
             latitude = this.props.latitude;
             longitude = this.props.longitude}
+
         latitude ||= 40.706064;
         longitude ||= -74.008782
         const mapOptions = {
@@ -26,10 +27,8 @@ class Map extends React.Component {
             zoom: 14,
             gestureHandling: "greedy"
         };
-        debugger
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map, this.handleClicker.bind(this))
-        // debugger
         if (this.props.singleListing){
             this.props.fetchListing(this.props.listingId)
         }

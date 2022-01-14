@@ -5,10 +5,16 @@ import { openModal } from "../../actions/modal_action";
 import MenuContainer from "../menu/menu_container";
 import SearchBar from "../search/search_bar";
 
-const NavBar = ({ currentUser, logout }) => {
+class NavBar extends React.Component {
+
+    toggle(){
+        document.getElementById("root").className="strobe"
+    }
+
+    render(){
     return (
         <header className="nav-bar">
-            <div className="nav-bar-left">
+            <div className="nav-bar-left" onClick={() => setTimeout(() => this.toggle(),100)}>
                 <Link to={"/"} className="logo-container"> 
                     <img className='logo-icon' src={window.logo_url}></img>
                     <span className='logo-text'>iiBnB</span>
@@ -25,7 +31,7 @@ const NavBar = ({ currentUser, logout }) => {
             </div>
         </header>
     )
-
+    }
 };
 
 export default NavBar

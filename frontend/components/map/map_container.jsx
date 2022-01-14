@@ -4,7 +4,7 @@ import Map from "./map";
 import { withRouter } from "react-router-dom";
 
 const mSTP = (state,ownProps) => {
-    // debugger
+    debugger
     return(
    { listings: Object.values(state.entities.listings),
     listingId: ownProps.match.params.listingId,
